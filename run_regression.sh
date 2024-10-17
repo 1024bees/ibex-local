@@ -3,7 +3,7 @@
 # Don't set -e because we want to move artifacts and print output whether or not the test fails
 
 cd dv/uvm/core_ibex
-export LM_LICENSE_FILE=27020@ec2-18-144-84-105.us-west-1.compute.amazonaws.com
+export LM_LICENSE_FILE=27020@ip-172-31-2-100
 
 
 make SIMULATOR=vcs TEST=riscv_jump_stress_test ITERATIONS=1
