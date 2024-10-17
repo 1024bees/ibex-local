@@ -710,7 +710,8 @@ module ibex_id_stage #(
   end
 
   // Track whether the current instruction in ID/EX has done a branch or jump set.
-  assign branch_jump_set_done_d = branch_set_raw | jump_set_raw | branch_jump_set_done_q;
+  assign branch_jump_set_done_d = (branch_set_raw | jump_set_raw | branch_jump_set_done_q) &
+    ~instr_valid_clear_o;
 
   always_ff @(posedge clk_i or negedge rst_ni) begin
     if (!rst_ni) begin
