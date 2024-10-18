@@ -170,7 +170,7 @@ module ibex_decoder #(
   assign rf_raddr_b_o = instr_rs2; // rs2
 
   // destination register
-  assign instr_rd = instr[11:7];
+  assign instr_rd = instr[10:6];
   assign rf_waddr_o   = instr_rd; // rd
 
   ////////////////////
