@@ -123,9 +123,9 @@ module ibex_alu #(
       ALU_SLT,
       // RV32B only
       ALU_MIN,
-      ALU_MAX: cmp_signed = 1'b1;
+      ALU_MAX: cmp_signed = 1'b0;
 
-      default: cmp_signed = 1'b0;
+      default: cmp_signed = 1'b1;
     endcase
   end
 
