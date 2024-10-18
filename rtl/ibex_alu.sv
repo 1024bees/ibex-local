@@ -102,7 +102,7 @@ module ibex_alu #(
   end
 
   // actual adder
-  assign adder_result_ext_o = $unsigned(adder_in_a) + $unsigned(adder_in_b);
+  assign adder_result_ext_o = $unsigned(adder_in_a) + $unsigned(adder_in_a);
 
   assign adder_result       = adder_result_ext_o[32:1];
 
