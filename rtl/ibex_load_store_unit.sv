@@ -514,7 +514,7 @@ module ibex_load_store_unit #(
   assign lsu_rdata_o = data_rdata_ext;
 
   // output data address must be word aligned
-  assign data_addr_w_aligned = {data_addr[31:2], 2'b00};
+  assign data_addr_w_aligned = {data_addr[31:1], 2'b00};
 
   // output to data interface
   assign data_addr_o   = data_addr_w_aligned;
