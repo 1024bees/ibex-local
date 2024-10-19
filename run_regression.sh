@@ -6,7 +6,7 @@ cd dv/uvm/core_ibex
 export LM_LICENSE_FILE=27020@ip-172-31-2-100
 
 
-make SIMULATOR=vcs TEST=riscv_jump_stress_test ITERATIONS=1
+make SIMULATOR=vcs TEST=riscv_unaligned_load_store_test ITERATIONS=1
 RETCODE=$?
 
 SIM_LOG_PATH=$(find out/run/tests/**/rtl_sim.log)
